@@ -1,6 +1,8 @@
+/* Added hover glow for vanilla logo */
 .logo.vanilla:hover {
   filter: drop-shadow(0 0 2em #ffe21c);
 }
+
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -33,6 +35,7 @@
   transition: 0.75s;
 }
 
+/* Added hover effect for Tauri logo */
 .logo.tauri:hover {
   filter: drop-shadow(0 0 2em #24c8db);
 }
@@ -92,6 +95,7 @@ button {
   margin-right: 5px;
 }
 
+/* Dark mode adjustments */
 @media (prefers-color-scheme: dark) {
   :root {
     color: #f6f6f6;
@@ -112,6 +116,7 @@ button {
   }
 }
 
+/* Notes layout: grid system for responsive cards */
 #note-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -119,9 +124,27 @@ button {
   margin: 30px;
 }
 
+/* App name beside app logo */
+.app-name {
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* Adjusted logo size for header */
+.app-logo {
+  width: 32px;
+  height: 32px;
+}
+
+/* Flex gap for header content */
+.app-head {
+  gap: 0.5rem;
+}
+
+/* Note card styling */
 .note {
   position: relative;
-  background: #0f0f0f;
+  background: #1f1f1f;
   border-radius: 12px;
   margin: 8px;
   padding: 16px;
@@ -129,13 +152,17 @@ button {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   color: #f6f6f6;
   cursor: pointer;
+  /* user-select: none; */
 }
 
+/* Hover animation for notes */
 .note:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  outline: solid 2px #3a6ad0;
 }
 
+/* Truncate long titles with ellipsis */
 .note h3 {
   margin: 0 0 8px 0;
   font-size: 1.1em;
@@ -144,6 +171,7 @@ button {
   text-overflow: ellipsis;
 }
 
+/* Truncate note text with ellipsis */
 .note p {
   font-size: 0.95em;
   white-space: nowrap;
@@ -151,7 +179,7 @@ button {
   text-overflow: ellipsis;
 }
 
-/* Menu button & dropdown */
+/* Menu button in top-right of note */
 .note-menu {
   position: absolute;
   top: 10px;
@@ -159,6 +187,7 @@ button {
   z-index: 20;
 }
 
+/* Menu trigger button */
 .menu-btn {
   background: none;
   border: none;
@@ -167,6 +196,7 @@ button {
   color: #f6f6f6;
 }
 
+/* Dropdown menu for actions */
 .dropdown {
   display: none;
   position: absolute;
@@ -181,15 +211,16 @@ button {
   min-width: 120px;
 }
 
+/* Dropdown button styling */
 .dropdown button {
   display: block;
   margin: 2px;
   width: 100%;
-  padding: 10px 14px;
+  padding: 10px;
   border: none;
-  background: #1e1e1e;
+  background: #2e2e2e;
   color: #f6f6f6;
-  text-align: left;
+  text-align: center;
   cursor: pointer;
   font-size: 0.9em;
 }
@@ -198,6 +229,7 @@ button {
   background: #2f2f2f;
 }
 
+/* Delete button highlighted red */
 .dropdown .delete-btn {
   color: #ff4c4c;
 }
@@ -205,6 +237,8 @@ button {
   background: #ff4c4c;
   color: #fff;
 }
+
+/* Update button highlighted blue */
 .dropdown .update-btn {
   color: #396cd8;
 }
@@ -213,11 +247,12 @@ button {
   color: #fff;
 }
 
+/* Show dropdown on hover */
 .note-menu:hover .dropdown {
   display: block;
 }
 
-/* Modal for full note */
+/* Modal for displaying full note */
 .modal {
   display: none;
   position: fixed;
@@ -232,6 +267,7 @@ button {
   align-items: center;
 }
 
+/* Modal content box */
 .modal-content {
   background: #1e1e1e;
   color: #f6f6f6;
@@ -243,6 +279,7 @@ button {
   animation: fadeIn 0.2s ease;
 }
 
+/* Close button in modal */
 .modal-close {
   float: right;
   font-size: 20px;
@@ -250,6 +287,7 @@ button {
   color: #f6f6f6;
 }
 
+/* Modal fade-in animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
