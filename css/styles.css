@@ -90,6 +90,10 @@ button {
   outline: none;
 }
 
+#demo {
+  margin: 16px;
+}
+
 #note-input,
 #note-title {
   margin-right: 5px;
